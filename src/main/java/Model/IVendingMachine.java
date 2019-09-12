@@ -4,7 +4,7 @@ public interface IVendingMachine {
 
     void addCurrency(AcceptedAmount x);
     Product productRequest(int productNumber );
-    int endSession();
+    boolean endSession();
     String getDescription(int productNumber);
     int getBalance();
     String[] getProducts();

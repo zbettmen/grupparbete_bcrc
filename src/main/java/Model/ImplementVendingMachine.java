@@ -31,23 +31,31 @@ public class ImplementVendingMachine implements IVendingMachine {
     }
 
     @Override
-    public int endSession() {
-        return 0;
+    public boolean endSession() {
+        return false;
     }
 
     @Override
     public String getDescription(int productNumber) {
-        return null;
+        for(Product product : ProductArrayList){
+            if (productNumber == product.getProductNumber()){
+                return product.examaninerad();
+            }
+        }return "Product not found";
     }
 
     @Override
     public int getBalance() {
-        return 0;
+        return saldo;
     }
 
     @Override
     public String[] getProducts() {
 
-        return new String[0];
+        String[] pro = new String[ProductArrayList.length];
+        for (int i = 0; i <ProductArrayList.length ; i++) {
+            pro[i] = ProductArrayList[i].getProcuctName();
+            
+        }return pro;
     }
 }

@@ -4,7 +4,7 @@ package se.ecutb.grupparbeteVendingMachine;
 import Model.*;
 
 public class App
-{
+{   private static ImplementVendingMachine test2;
     public static void main( String[] args ){
 
         Product test = new Mat(50,"Kebab", "650", 1, "nasty stuff");
